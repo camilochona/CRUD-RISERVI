@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reservaciones para Restaurante</h1>
+
+        <h2>Crear Reservación</h2>
+        <form id="reservacionForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <button type="submit">Crear Reservación</button>
+        </form>
+
+        <h2>Ver Reservaciones</h2>
+        <input type="date" id="verFecha" onchange="verReservaciones()">
+        <ul id="reservacionesList"></ul>
+
+        <h2>Actualizar o Eliminar Reservación</h2>
+        <input type="number" id="idReservacion" placeholder="ID de la reservación">
+        <input type="text" id="estado" placeholder="Nuevo estado">
+        <button onclick="actualizarReservacion()">Actualizar</button>
+        <button onclick="eliminarReservacion()">Eliminar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
